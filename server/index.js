@@ -7,7 +7,7 @@ const session = require("express-session");
 
 const MongoClient = require("mongodb").MongoClient;
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || '3000';
 
 // создаем объект MongoClient и передаем ему строку подключения
 const mongoClient = new MongoClient("mongodb://localhost:27017/", {
