@@ -7,6 +7,8 @@ const session = require("express-session");
 
 const MongoClient = require("mongodb").MongoClient;
 
+const PORT = process.env.PORT || 3000;
+
 // создаем объект MongoClient и передаем ему строку подключения
 const mongoClient = new MongoClient("mongodb://localhost:27017/", {
     useNewUrlParser: true,
@@ -40,7 +42,7 @@ mongoClient.connect((err, client) => {
     app.use("/", express.static(path.join(__dirname,"../assets")));
 
     // запускаем сервер на 3000 порту
-    app.listen(3000, () => {
-        console.log("http://localhost:3000/");
+    app.listen(PORT, () => {
+        console.log("server has been started...");
     });
 });
