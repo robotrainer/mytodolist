@@ -10,7 +10,7 @@ const MongoClient = require("mongodb").MongoClient;
 const PORT = process.env.PORT || '3000';
 
 // создаем объект MongoClient и передаем ему строку подключения
-const mongoClient = new MongoClient("mongodb://localhost:27017/", {
+const mongoClient = new MongoClient(PORT, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -47,6 +47,6 @@ mongoClient.connect((err, client) => {
     });
 });
 
-app.listen(PORT, () => {
-    console.log("server has been started...");
-});
+// app.listen(PORT, () => {
+//     console.log("server has been started...");
+// });
