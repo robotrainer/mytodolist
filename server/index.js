@@ -47,6 +47,6 @@ mongoClient.connect((err, client) => {
     });
 });
 
-// app.listen(PORT, () => {
-//     console.log("server has been started...");
-// });
+app.listen(PORT, () => {
+    console.log("server has been started...");
+});
