@@ -43,6 +43,6 @@ mongoClient.connect((err, client) => {
 
     // запускаем сервер на 3000 порту
     app.listen(PORT, () => {
-        console.log("server has been started...");
+        console.log("http://localhost:3000/");
     });
 });
