@@ -24,7 +24,6 @@ async function init() {
       const data_ = await res.json();
       data = data_;
       // data.push({ title: add, completed: false });
-      console.log(data);
       e.target.value = '';
       render();
     }
