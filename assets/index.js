@@ -101,8 +101,8 @@ function render() {
     document.querySelector('.buttonClear').style.visibility = 'visible';
   }
 
-  document.querySelector('.listTodo').innerHTML = `<span style="color: red">${
-    data.filter((x) => !x.completed).length}</span><span style="color: rgb(124, 133, 255)"> дел осталось</span>`;
+  document.querySelector('.listTodo').innerHTML = `<span class="quantity" style="color: red">${
+    data.filter((x) => !x.completed).length}</span><span class="quantity" style="color: rgb(124, 133, 255)"> дел осталось</span>`;
 
   const check_all = (data.filter((x) => x.completed).length === data.length) && data.length !== 0;
   if (check_all) {

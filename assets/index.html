@@ -3,37 +3,40 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Список дел</title>
+    <title>MyTodoList</title>
     <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width">
   </head>
 
   <body>
-    <div class="headTodo">MyTodo</div>
+    <div class="container">
+      <div class="headTodo">MyTodoList</div>
 
-    <div class="user">
-      {{log}}
-      <form action="/logout/" method="POST"><input class="logout" type="submit" value="Выход"></form>
-    </div>
-
-    <div class="searchbar">
-      <input type="search" class="search" placeholder="Поиск" />
-    </div>
-
-    <div class = "toolbar">
-      <input class="check-all" type="checkbox" id="check-all-id"/><label for="check-all-id"></label>
-      <input type="addTodo" class="addTodo" placeholder="Добавить дело"/>
-    </div>
-
-    <div class="list"></div>
-
-    <div class="footer">
-      <div class="listTodo"> дел осталось</div>
-      <div class="filter">
-        <label><input class="fil" type="radio" name="filterRadio" value="all" checked />Все</label>
-        <label><input class="fil" type="radio" name="filterRadio" value="uncompleted" />Активные</label>
-        <label><input class="fil" type="radio" name="filterRadio" value="completed" />Завершённые</label>
+      <div class="user">
+        {{log}}
+        <form action="/logout/" method="POST"><input class="logout" type="submit" value="Выход"></form>
       </div>
-      <div class="clear"><button class="buttonClear">Удалить завершённые</button></div>
+  
+      <div class="searchbar">
+        <input type="search" class="search" placeholder="Поиск" />
+      </div>
+  
+      <div class = "toolbar">
+        <input class="check-all" type="checkbox" id="check-all-id"/><label for="check-all-id"></label>
+        <input type="addTodo" class="addTodo" placeholder="Добавить дело"/>
+      </div>
+  
+      <div class="list"></div>
+  
+      <div class="footer">
+        <div class="listTodo"> дел осталось</div>
+        <div class="filter">
+          <label><input class="fil" type="radio" name="filterRadio" value="all" checked />Все</label>
+          <label><input class="fil" type="radio" name="filterRadio" value="uncompleted" />Активные</label>
+          <label><input class="fil" type="radio" name="filterRadio" value="completed" />Завершённые</label>
+        </div>
+        <div class="clear"><button class="buttonClear">Удалить завершённые</button></div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"></script>

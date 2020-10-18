@@ -16,7 +16,7 @@ module.exports = function (app, db) {
         // читаем файл index.html
         const html = fs
             .readFileSync(path.join(__dirname, "../assets/index.html"))
-            .toString().replace('{{log}}', `<div>Вы вошли как: <span style="font-weight: bold; color: rgb(124, 133, 255);">${req.session.user.login}</span></div>`);;
+            .toString().replace('{{log}}', `<div>Вы вошли как: <span style="font-style: italic; font-weight: bold; font-size: 20px; color: rgb(124, 133, 255);">${req.session.user.login}</span></div>`);;
 
         // говорим, что ответом будет документ в формате html
         res.setHeader("Content-Type", "text/html");
